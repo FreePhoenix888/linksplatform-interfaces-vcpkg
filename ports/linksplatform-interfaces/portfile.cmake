@@ -12,17 +12,17 @@ vcpkg_from_github(
     HEAD_REF master
 )
 
-
 #vcpkg_extract_source_archive_ex(
-#        OUT_SOURCE_PATH SOURCE_PATH
+#        OUT_SOURCE_PATH	 SOURCE_PATH
 #        ARCHIVE ${ARCHIVE}
 #)
 
 file(INSTALL ${SOURCE_PATH}/LICENSE DESTINATION ${CURRENT_PACKAGES_DIR}/share/${PORT} RENAME copyright)
 file(INSTALL ${SOURCE_PATH}/cpp/Platform.Interfaces DESTINATION ${CURRENT_PACKAGES_DIR}/include/)
 
-file(WRITE ${CURRENT_PACKAGES_DIR}/share/${PORT}/platform-interfaces-config.cmake
+file(WRITE ${CURRENT_PACKAGES_DIR}/share/platform-interfaces/platform-interfaces-config.cmake
         "add_library(Platform.Interfaces INTERFACE)\n"
         "target_include_directories(Platform.Interfaces INTERFACE ${CURRENT_PACKAGES_DIR}/include/Platform.Interfaces)\n"
         "set_target_properties(Platform.Interfaces PROPERTIES CXX_STANDARD 20)\n"
         )
+
