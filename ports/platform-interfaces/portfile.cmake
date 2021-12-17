@@ -1,9 +1,3 @@
-#vcpkg_download_distfile(ARCHIVE
-#        URLS "https://github.com/linksplatform/Interfaces/archive/refs/tags/0.4.0_0.2.5.zip"
-#        FILENAME "Interfaces-0.4.0_0.2.5.zip"
-#        SHA512 #5ecc2fa5af2bdeee0d171f4aa895c4861b820a18d4dd006e07d871aaa73668e1d97790b28ba4f4e943c7fb4d50acc03c40f585f3524b4b1bcc5fd8638e8a5905
-#        )
-
 vcpkg_from_github(
     OUT_SOURCE_PATH SOURCE_PATH
     REPO linksplatform/Interfaces
@@ -12,10 +6,6 @@ vcpkg_from_github(
     HEAD_REF master
 )
 
-#vcpkg_extract_source_archive_ex(
-#        OUT_SOURCE_PATH	 SOURCE_PATH
-#        ARCHIVE ${ARCHIVE}
-#)
 
 file(INSTALL ${SOURCE_PATH}/LICENSE DESTINATION ${CURRENT_PACKAGES_DIR}/share/${PORT} RENAME copyright)
 file(INSTALL ${SOURCE_PATH}/cpp/Platform.Interfaces DESTINATION ${CURRENT_PACKAGES_DIR}/include/)

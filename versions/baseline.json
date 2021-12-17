@@ -1,5 +1,5 @@
 {
   "default": {
-    "linksplatform-interfaces": { "baseline": "0.2.5", "port-version": 0 }
+    "platform-interfaces": { "baseline": "0.2.5", "port-version": 0 }
   }
 }
